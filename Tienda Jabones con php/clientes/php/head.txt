@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JABONES DIEGO SL</title>
+
+	<!----Custom css link---->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!----Favicon link---->
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+</head>
+
+<body>
+  <?php 
+    session_start();
+  ?>
+  <!--BARA NAVEGACION-->
+  <header style="border-bottom: 1px solid #757575;">
+    <a href="../index.php" class="logo"><img src="../img/logo.png" style="width: 30px;height: 25px;">Jabones Diego SL</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+      <li><a href="../index.php">Inicio</a></li>
+      <li><a href="../allimages.php">Productos</a></li>
+      <li><a href="../contacto.php">Contacto</a></li>
+      <li><a href="../nosotros.php">Sobre nosotros</a></li>
+    </ul>
+
+    <div class="icons">
+      <a href="#"><i class='bx bxs-shopping-bag'></i></a>
+
+      <?php
+          if(isset($_SESSION['usuario'])){
+            echo "<a href='../admin' style='display: none;'><i class='bx bxs-user-circle'></i></a>";
+          }else{
+            echo "<a href='../admin'><i class='bx bxs-user-circle'></i></a>";
+          }
+        ?>
+
+      
+        <?php
+          if(isset($_SESSION['usuario'])){
+            echo "<i class='bx bxs-user'>";
+            echo $_SESSION['usuario'];
+            echo "</i>";
+          }
+        ?>
+        
+      <a href="../logout.php"><i class='bx bx-x'></i></i></a>
+    </div>
+  </header>

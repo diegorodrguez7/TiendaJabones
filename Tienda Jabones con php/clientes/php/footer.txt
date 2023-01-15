@@ -1,0 +1,15 @@
+<!-- Cerrar conexión -->
+<?php $conn = null; ?>
+
+<!-- Div que cierra el container de la zona de contenido de la pagina -->
+<div class="last" style='position:fixed;bottom:0px;width:100%;'>
+  <a href="mailto:drplaybasketball17@gmail.com?Subject=Saber%20más%20de%20la%20tienda"><i class='bx bxl-gmail' style='color:black;font-size: 24px;'></i></a>
+  <a href="https://api.whatsapp.com/send?phone=+34645405517&text=Hola%20,te%20asesoramos%20por%20whatsapp. Gestiona%20tu%20compra%20por%20este%20canal."><i class='bx bxl-whatsapp' style='color:black;font-size: 24px;'></i></a>
+  <p>© 2022 by Diego Rodríguez Jacinto. 2DAW-DSW</p>
+</div>
+
+<!----custom js link--->
+<script src="../js/script.js"></script>
+
+</body>
+</html>
